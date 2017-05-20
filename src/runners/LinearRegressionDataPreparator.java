@@ -13,8 +13,8 @@ import java.util.ArrayList;
 public class LinearRegressionDataPreparator {
 
     private static int[] L = {3, 4};
-    private static double[] eps = {0.55};
-    private static double[] delta = {0.,  0.1};
+    private static double[] eps = {0.15, 0.55};
+    private static double[] delta = {0., 0.005, 0.01,  0.4, 0.5};
     private static int[] T = {10000};
     private static int M = 100;
 

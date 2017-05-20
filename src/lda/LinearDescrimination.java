@@ -36,6 +36,17 @@ public class LinearDescrimination {
     public static double getA() {
         return A;
     }
+/**
+ * data in format
+ * 100
+ 0.994160515;0.995540898;0
+ 0.995404141;0.994064799;0
+ 0.994364744;0.991888402;0
+ 0.996466022;0.992379601;0
+ 0.995557754;0.994463478;0
+ 0.995272534;0.994492969;0
+ 0.994884985;0.994607152;0
+ */
 
     static void readStudingData() {
         String[] strs = null;
@@ -68,7 +79,15 @@ public class LinearDescrimination {
     }
 
 
-
+//data in format
+    /*
+    200
+0.996171184;0.993601393
+0.994087966;0.994612198
+0.994918877;0.994417001
+0.994475736;0.992475443
+0.995788809;0.995131384
+    * */
     static void readResearchingData() {
         String[] strs = null;
         String str = null;
@@ -247,8 +266,8 @@ public class LinearDescrimination {
     public static void researchData() throws FileNotFoundException {
 
         PrintWriter pw =new PrintWriter("descriminationRES.csv");
-        pw.println("=SUM(A2:A102)");
-        pw.println("=SUM(A103:A302)");
+        pw.println("=СУММ(A3:A103)");
+        pw.println("=СУММ(A104:A302)");
         for ( int i = 0; i < data.length; ++i){
             if(countD(coefB, data[i]) > A){
                 pw.println("1");
